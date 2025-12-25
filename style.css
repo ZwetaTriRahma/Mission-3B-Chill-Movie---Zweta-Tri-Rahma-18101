@@ -1,0 +1,264 @@
+/* RESET DASAR */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BACKGROUND HALAMAN */
+body {
+  background: #111127;
+  height: auto;
+  min-height: 100vh;
+  font-family: Lato, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* CONTAINER UTAMA */
+.login-container {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.auth-wrapper {
+  display: flex;
+  background: #111127;
+  width: 900px;
+  max-width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+/* KIRI: GAMBAR BIOSKOP */
+.auth-visual {
+  width: 50%;
+}
+
+.auth-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* KANAN: FORM LOGIN */
+.auth-form {
+  width: 50%;
+  padding: 40px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-form .logo {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 40px;
+  text-align: left;
+}
+
+.subtitle {
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 16px;
+  margin-top: 10px;
+  display: block;
+}
+
+input {
+  width: 100%;
+  padding: 14px 20px;
+  border: 1px solid #952222;
+  border-radius: 24px;
+  background: transparent;
+  color: white;
+  margin-top: 6px;
+  font-size: 16px;
+  outline: none;
+}
+
+/* INPUT PASSWORD + ICON MATA */
+.input-group {
+  position: relative;
+  width: 100%;
+}
+
+.eye {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+/* TEKS LOGIN */
+.login-text {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-top: 12px;
+  text-align: center;
+}
+
+.login-text a {
+  font-weight: bold;
+  color: #952222;
+  text-decoration: underline;
+}
+
+/* TOMBOL LOGIN */
+.btn {
+  width: 100%;
+  padding: 14px;
+  background: #952222;
+  border: none;
+  border-radius: 24px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #b52a2a;
+}
+
+/* PEMBATAS */
+.divider {
+  text-align: center;
+  font-size: 14px;
+  margin: 15px 0;
+  opacity: 0.6;
+}
+
+/* TOMBOL GOOGLE */
+.btn-google {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid rgba(231,227,252,0.23);
+  background: transparent;
+  border-radius: 24px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-google img {
+  width: 18px;
+}
+
+.btn-google:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+/* RESPONSIF MOBILE */
+@media (max-width: 600px) {
+  .auth-wrapper {
+    flex-direction: column;
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .auth-visual,
+  .auth-form {
+    width: 100%;
+  }
+
+  .auth-visual {
+    height: 200px;
+  }
+
+  .auth-form {
+    padding: 30px 20px;
+  }
+
+  h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .subtitle {
+    text-align: center;
+  }
+}
+
+.footer {
+  width: 100%;
+  background: #0a0a14;
+  padding: 30px 20px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-content {
+  width: 900px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-logo-img {
+  width: 48px; 
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.footer-copy {
+  font-size: 13px;
+  opacity: 0.6;
+  margin-bottom: 14px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-links a {
+  font-size: 14px;
+  color: white;
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  color: #ff4444;
+}
+
+@media (max-width: 600px) {
+  .footer-links {
+    gap: 16px;
+  }
+  .footer-links a {
+    font-size: 12px;
+  }
+}
+
+
+

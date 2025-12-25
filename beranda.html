@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beranda – CHILL</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #111127;
+  min-height: 100vh;
+  font-family: Lato, sans-serif;
+  color: white;
+}
+
+/* NAVBAR */
+.navbar {
+  width: 100%;
+  background: #0f0f1a;
+  padding: 18px 40px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.logo-img {
+  width: 90px;
+  height: auto;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+.menu a:hover {
+  opacity: 1;
+  color: #952222;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: auto;
+  border: 2px solid #952222;
+}
+
+/* HERO */
+.hero {
+  width: 100%;
+  height: 480px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 2px solid rgba(255,255,255,0.05);
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  max-width: 520px;
+}
+
+.hero-text h1 {
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.hero-text p {
+  font-size: 16px;
+  opacity: 0.7;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn-start, .btn-more, .btn-sound {
+  background: #952222;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-sound {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  font-size: 16px;
+}
+
+.btn-start:hover, .btn-more:hover, .btn-sound:hover {
+  background: #b52a2a;
+}
+
+/* SECTION */
+.section {
+  padding: 40px 40px;
+}
+
+.section h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+/* GRID FILM DESKTOP 4 */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.movie-card {
+  background: #1a1a2e;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.movie-card:hover {
+  transform: scale(1.04);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.movie-info {
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.rating {
+  margin-top: 6px;
+  font-size: 12px;
+  color: gold;
+  opacity: 0.9;
+}
+
+/* SLIDER PANAH */
+.slider-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #952222;
+  border: none;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-arrow:hover {
+  background: #b52a2a;
+}
+
+.slider-arrow.left {
+  left: -15px;
+}
+
+.slider-arrow.right {
+  right: -20px;
+}
+
+/* RESPONSIVE HP */
+@media (max-width: 600px) {
+  .hero-text {
+    left: 20px;
+    bottom: 30px;
+    max-width: 90%;
+  }
+
+  .hero-text h1 {
+    font-size: 26px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+
+  .section {
+    padding: 20px;
+  }
+
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .movie-card img {
+    height: 150px;
+  }
+}
+
+/* FOOTER */
+.footer {
+  background: #0a0a14;
+  padding: 40px 50px;
+  margin-top: 100px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-logo img {
+  width: 190px;
+  margin-bottom: 12px;
+}
+
+.footer-copy {
+  font-size: 14px;
+  opacity: 0.5;
+}
+
+.footer-links {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.link-group h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.link-group a {
+  display: block;
+  font-size: 14px;
+  opacity: 0.7;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 6px;
+}
+
+.link-group a:hover {
+  opacity: 1;
+  color: #e63939;
+}
+
+/* RESPONSIVE FOOTER MOBILE */
+@media (max-width: 600px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+    gap: 30px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <img class="logo-img" src="assets/logo.png" alt="CHILL Logo">
+  <div class="menu">
+    <a href="#">Series</a>
+    <a href="#">Film</a>
+    <a href="#">Daftar Saya</a>
+  </div>
+  <img class="avatar" src="assets/profil.jpg" alt="User Avatar">
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <img src="assets/movie1.jpg" alt="Hero Banner">
+  <div class="hero-text">
+    <h1>Avatar Fire and Ash</h1>
+    <p>“A fierce new conflict ignites between ancient tribes and invading forces, as forest guardians fight to protect their world from ruin.”</p>
+
+    <div class="hero-buttons">
+      <button class="btn-start">Mulai</button>
+      <button class="btn-more">Selengkapnya</button>
+      <button class="btn-sound">🔊</button>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 1 -->
+<div class="section section-landscape">
+  <h2>Melanjutkan Tonton Film</h2>
+
+  <div class="slider-wrapper">
+    <button class="slider-arrow left">‹</button>
+    <button class="slider-arrow right">›</button>
+
+    <div class="movie-grid">
+
+      <div class="movie-card">
+        <img src="assets/movie2.jpg" alt="Money Heist">
+        <div class="movie-info">
+          <h2>Money Heist</h2>
+          <p class="genre">TV Series | 2017–2021 | Drama, Thriller</p>
+          <span class="rating">⭐ 4.8</span>
+        </div>
+      </div>
+
+      <div class="movie-card">
+        <img src="assets/movie3.jpg" alt="Deadpool Wolverine">
+        <div class="movie-info">
+          <h2>Deadpool Wolverine</h2>
+          <p class="genre">2024 | Action / Comedy | 2h 8m</p>
+          <span class="rating">⭐ 4.7</span>
+        </div>
+      </div>
+
+      <div class="movie-card">
+        <img src="assets/movie4.webp" alt="Oblivion">
+        <div class="movie-info">
+          <h2>Oblivion</h2>
+          <p class="genre">2013 | Action / Adventure | 2h 4m</p>
+          <span class="rating">⭐ 4.5</span>
+        </div>
+      </div>
+
+      <div class="movie-card">
+        <img src="assets/movie5.jpg" alt="Interstellar">
+        <div class="movie-info">
+          <h2>Interstellar</h2>
+          <p class="genre">2013 | Action / Adventure | 2h 49m</p>
+          <span class="rating">⭐ 4.9</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- SECTION 2 -->
+<div class="section top-rating section-portrait">
+  <h2>Top Rating Film & Series Hari ini</h2>
+
+  <div class="slider-wrapper">
+    <button class="slider-arrow left">‹</button>
+    <button class="slider-arrow right">›</button>
+
+    <div class="movie-grid">
+      <div class="movie-card"><img src="assets/top1.png"><div class="movie-info">Superman<div class="rating">⭐ 4.8</div></div></div>
+      <div class="movie-card"><img src="assets/top2.jpg"><div class="movie-info">Weapons<div class="rating">⭐ 4.9</div></div></div>
+      <div class="movie-card"><img src="assets/top3.jpg"><div class="movie-info">Scarlet<div class="rating">⭐ 4.6</div></div></div>
+      <div class="movie-card"><img src="assets/top4.jpg"><div class="movie-info">Minecraft The Movie<div class="rating">⭐ 4.7</div></div></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- SECTION 3 -->
+<div class="section section-portrait">
+  <h2>Film Trending</h2>
+
+  <div class="slider-wrapper">
+    <button class="slider-arrow left">‹</button>
+    <button class="slider-arrow right">›</button>
+
+    <div class="movie-grid">
+      <div class="movie-card"><img src="assets/trending1.avif"><div class="movie-info">F1 The Movie<div class="rating">⭐ 4.8</div></div></div>
+      <div class="movie-card"><img src="assets/trending2.jpg"><div class="movie-info">The Fantastic Four<div class="rating">⭐ 4.7</div></div></div>
+      <div class="movie-card"><img src="assets/trending3.jpeg"><div class="movie-info">Mission Imposible : The Final Reckoning<div class="rating">⭐ 4.6</div></div></div>
+      <div class="movie-card"><img src="assets/trending4.webp"><div class="movie-info">Petaka Gunung Gede<div class="rating">⭐ 4.7</div></div></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- SECTION 4 -->
+<div class="section section-portrait">
+  <h2>Rilis Baru</h2>
+
+  <div class="slider-wrapper">
+    <button class="slider-arrow left">‹</button>
+    <button class="slider-arrow right">›</button>
+
+    <div class="movie-grid">
+      <div class="movie-card"><img src="assets/new1.jpg"><div class="movie-info">The Housemaid<div class="rating">⭐ 4.7</div></div></div>
+      <div class="movie-card"><img src="assets/new2.jpeg"><div class="movie-info">Agak Laen 2<div class="rating">⭐ 4.8</div></div></div>
+      <div class="movie-card"><img src="assets/new3.jpg"><div class="movie-info">Five Nights at Freddy's 2<div class="rating">⭐ 4.7</div></div></div>
+      <div class="movie-card"><img src="assets/new4.jpg"><div class="movie-info">Anaconda<div class="rating">⭐ 4.6</div></div></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-logo">
+      <img src="assets/logo.png" alt="CHILL Logo">
+      <p class="footer-copy">©2025 Chill All Rights Reserved.</p>
+    </div>
+
+    <div class="footer-links">
+      <div class="link-group">
+        <h4>Genre</h4>
+        <a href="#">Drama</a>
+        <a href="#">Komedi</a>
+        <a href="#">Sains & Alam</a>
+        <a href="#">Thriller</a>
+        <a href="#">Petualangan</a>
+        <a href="#">Kejahatan</a>
+        <a href="#">Anime</a>
+        <a href="#">Fantasi Ilmiah & Fantasi</a>
+        <a href="#">Anak-anak</a>
+        <a href="#">KDram</a>
+      </div>
+
+      <div class="link-group">
+        <h4>Bantuan</h4>
+        <a href="#">Kontak Kami</a>
+        <a href="#">Syarat & Ketentuan</a>
+        <a href="#">Privasi</a>
+      </div>
+    </div>
+    
+  </div>
+</footer>
+
+</body>
+</html>
